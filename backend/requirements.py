@@ -1,4 +1,6 @@
 import subprocess
+from nltk.corpus import stopwords
+import nltk
 
 # Upgrade pip first
 subprocess.check_call(['python3', '-m', 'pip', 'install', '--upgrade', 'pip'])
@@ -72,12 +74,17 @@ packages = [
     'wrapt==1.14.1'
 ]
 
+
 # Install required packages
 for package in packages:
     subprocess.check_call(['pip', 'install', package])
 
-# Install NLTK data
-import nltk
+# Ensure NLTK resources are available
+try:
+    _stopwords = stopwords.words("english")
+except LookupError:
+    nltk.download('stopwords')
+
+# Download other NLTK resources if needed
 nltk.download('punkt')
 nltk.download('wordnet')
-nltk.download('stopwords')
