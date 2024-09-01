@@ -76,6 +76,8 @@ packages = [
 for package in packages:
     subprocess.check_call(['pip', 'install', package])
 
+subprocess.check_call(['python3', '-m', 'nltk.downloader', 'stopwords'])
+
 # Install NLTK data
 import nltk
 nltk.download('punkt')
