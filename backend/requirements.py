@@ -61,7 +61,7 @@ packages = [
     'tensorboard-plugin-wit==1.8.1',
     'tensorflow==2.12.0',
     'tensorflow-estimator==2.12.0',
-    'tensorflow-intel==2.13.0',
+    'tensorflow-intel',
     'tensorflow-io-gcs-filesystem==0.31.0',
     'termcolor==2.3.0',
     'tqdm==4.65.0',
