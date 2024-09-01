@@ -1,5 +1,8 @@
 import subprocess
 
+# Upgrade pip first
+subprocess.check_call(['python3', '-m', 'pip', 'install', '--upgrade', 'pip'])
+
 # List of required packages
 packages = [
     'absl-py==1.4.0',
